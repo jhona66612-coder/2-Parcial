@@ -1,14 +1,15 @@
+/* ── Page ── */
 .notes-page {
   min-height: 100vh;
   padding: 2.5rem;
-  background: #f8fafc;
-  color: #111827;
+  background: #ebebed;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
 }
 
 .notes-page__header {
-  max-width: 760px;
-  margin-bottom: 2rem;
+  max-width: 44rem;
+  margin: 0 auto 2rem;
 }
 
 .eyebrow {
@@ -32,114 +33,122 @@
   color: #4b5563;
 }
 
+/* ── Grid ── */
 .notes-grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.note-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 1.75rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  background: white;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  grid-template-columns: 1fr;
+  max-width: 36rem;
+  margin: 0 auto;
 }
 
-.note-card--active {
-  background: linear-gradient(180deg, #7c3aed 0%, #4f46e5 100%);
-  color: white;
-  border: none;
+/* ── Card ── */
+.note-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
 }
 
-.note-card--future {
-  background: #ecfdf5;
-}
-
-.note-card--completed {
-  background: #f3f4f6;
-}
-
-.note-card__head {
+/* ── Card Header ── */
+.note-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  padding: 0.65rem 1rem;
+  gap: 0.75rem;
 }
 
+.note-card__header--active   { background: #e05050; }
+.note-card__header--future   { background: #7c5cbf; }
+.note-card__header--completed { background: #9ca3af; }
+
+.note-card__header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.note-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.note-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.note-card__code {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.note-card__diamond {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Icon Circle ── */
 .icon-circle {
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 1.6rem;
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: rgba(99, 102, 241, 0.12);
-  color: #4f46e5;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
-.note-card--active .icon-circle {
-  background: rgba(255, 255, 255, 0.18);
-  color: white;
+.icon-circle--active    { background: rgba(255,255,255,0.25); color: #ffffff; }
+.icon-circle--future    { background: rgba(255,255,255,0.22); color: #ffffff; }
+.icon-circle--completed { background: rgba(255,255,255,0.28); color: #ffffff; }
+
+/* ── Card Body ── */
+.note-card__body {
+  padding: 0.9rem 1rem 0.85rem;
+  background: #ffffff;
 }
 
-..status-pill {
-  display: inline-flex;
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
+.note-card__description {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.55;
 }
 
-.note-meta {
-  display: grid;
-  gap: 0.35rem;
-  margin-bottom: 1rem;
-}
-
-.note-meta__updated {
-  font-size: 0.85rem;
-  color: inherit;
-  opacity: 0.75;
-}
-
-.note-card__meta {
-  margin: 0;
-  font-size: 0.85rem;
-  color: inherit;
-  opacity: 0.75;
-}
-
-.note-card h3 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.note-card p {
-  margin: 0;
-  line-height: 1.7;
-}
-
+/* ── Footer ── */
 .note-card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: inherit;
+  padding-top: 0.6rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.8rem;
 }
 
-.note-card__footer strong {
-  display: block;
-  color: inherit;
+.note-card__footer-label {
+  color: #6b7280;
 }
 
-.note-card--active .note-card__meta,
-.note-card--active .note-card p,
-.note-card--active .note-card__footer {
-  opacity: 0.9;
+.note-card__footer-date {
+  color: #374151;
+  font-weight: 500;
 }
+
+/* ── Helper labels ── */
+.helper-label {
+  font-size: 0.72rem;
+  color: #7c5cbf;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
