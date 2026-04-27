@@ -4,7 +4,7 @@
   padding: 2.5rem;
   background: #ebebed;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #111827;
+  color: #ffffff;
 }
 
 .notes-page__header {
@@ -150,9 +150,4 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
-}
-
-.helper-label::before {
-  content: '◆';
-  font-size: 0.65rem;
 }

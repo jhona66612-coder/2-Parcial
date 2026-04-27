@@ -7,7 +7,6 @@ const notes = [
     variant: 'active',
     updatedAt: '3/8/2020',
     code: 'SAAS-0000',
-    helperLabel: 'helper/note/active',
   },
   {
     title: 'Agenda/Topic',
@@ -15,7 +14,6 @@ const notes = [
     variant: 'future',
     updatedAt: '3/8/2020',
     code: 'SAAS-0000',
-    helperLabel: 'helper/note/future',
   },
   {
     title: 'Agenda/Topic',
@@ -23,7 +21,6 @@ const notes = [
     variant: 'completed',
     updatedAt: '3/8/2020',
     code: 'SAAS-0000',
-    helperLabel: 'helper/note/completed',
   },
 ]
 
