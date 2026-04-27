@@ -1,6 +1,6 @@
-export function IconCircle({ text }) {
+export function IconCircle({ text, variant }) {
   return (
-    <div className="icon-circle" aria-hidden="true">
+    <div className={`icon-circle icon-circle--${variant}`} aria-hidden="true">
       {text}
     </div>
   )
